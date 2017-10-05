@@ -8,9 +8,9 @@ public class Figure extends Unit
 {
     private String colour;
     
-    public Figure( int[] position, String colour )
+    public Figure( int xPos, int yPos, String colour )
     {
-        super(position);
+        super(xPos, yPos);
         this.colour = colour;
     }
     

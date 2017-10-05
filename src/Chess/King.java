@@ -7,9 +7,11 @@ package Chess;
 public class King extends Figure
 {
 
-    public King(int[] position, String colour) {
-        super(position, colour);
+    public King( int xPos, int yPos, String colour ) {
+        super(xPos, yPos, colour);
     }
+
+
     public void makeMove( )
     {
         

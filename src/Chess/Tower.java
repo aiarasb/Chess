@@ -7,9 +7,11 @@ package Chess;
 public class Tower extends Figure
 {
 
-    public Tower(int[] position, String colour) {
-        super(position, colour);
+    public Tower( int xPos, int yPos, String colour ) {
+        super(xPos, yPos, colour);
     }
+
+   
     public void makeMove( )
     {
         

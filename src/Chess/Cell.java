@@ -7,8 +7,8 @@ package Chess;
 public class Cell extends Unit
 {
     
-    public Cell(int[] position) {
-        super(position);
+    public Cell( int xPos, int yPos ) {
+        super(xPos, yPos);
     }
     
 }

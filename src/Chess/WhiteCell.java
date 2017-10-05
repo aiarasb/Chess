@@ -7,8 +7,10 @@ package Chess;
 public class WhiteCell extends Cell
 {
     
-    public WhiteCell(int[] position) {
-        super(position);
+    public WhiteCell( int xPos, int yPos ) {
+        super(xPos, yPos);
     }
+    
+
     
 }

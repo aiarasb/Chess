@@ -6,21 +6,23 @@ package Chess;
 
 public class Unit
 {
-    private int[] position;
+    private Position position;
     
-    public Unit( int[] position )
+    public Unit( int xPos, int yPos )
     {
-        
-    }
+        this.position = new Position(xPos, yPos);
+    }  
     
-    public void setPosition( int[] position )
-    {
-        this.position=position;
-    }
-    
-    public int[] getPosition( )
+    public Position getPosition( )
     {
         return position;
+    }
+    
+    
+
+    public void setPosition( Position position )
+    {
+        this.position=position;
     }
     
     

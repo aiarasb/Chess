@@ -7,9 +7,11 @@ package Chess;
 public class Pawn extends Figure
 {
 
-    public Pawn(int[] position, String colour) {
-        super(position, colour);
+    public Pawn( int xPos, int yPos, String colour ) {
+        super(xPos, yPos, colour);
     }
+
+    
     public void makeMove( )
     {
         
