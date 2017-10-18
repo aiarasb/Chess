@@ -6,7 +6,7 @@ package Chess;
 
 public class Board
 {
-    private Board instance;
+    private static Board instance = new Board();
     
     private Pawn pawnPrototype;
     
@@ -17,9 +17,17 @@ public class Board
         
     }
     
-    public Board getInstance( )
+    public static Board getInstance( )
     {
-        return null;
+        return instance;
+    }
+
+    public FactoryProducer getFactoryProducer() {
+        return factoryProducer;
+    }
+
+    public void setFactoryProducer(FactoryProducer factoryProducer) {
+        this.factoryProducer = factoryProducer;
     }
     
     public void setup( )
