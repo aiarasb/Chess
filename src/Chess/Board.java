@@ -6,6 +6,12 @@ package Chess;
 
 public class Board
 {
+    public static final String ANSI_GREEN_BACKGROUND = "\u001B[42m";
+    public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_WHITE = "\u001B[37m";
+
     private static Board instance = new Board();
     
     private Pawn pawnPrototype;
@@ -83,17 +89,33 @@ public class Board
     {
         for(int x=0;x<8;x++){
             for(int y=0;y<8;y++) {
-                System.out.println("Cell: "+gameBoard[x][y]);
-                if (gameBoard[x][y].getFigure() != null)
-                    System.out.println("Figure at "+x+","+y+": "+gameBoard[x][y].getFigure()+", figure color:"+gameBoard[x][y].getFigure().getColor());
+                String printable = "";
+                if (gameBoard[x][y].getColor() == "white") {
+                    printable += ANSI_WHITE_BACKGROUND+ANSI_BLACK;
+                } else {
+                    printable += ANSI_GREEN_BACKGROUND;
+                }
+                if (gameBoard[x][y].getFigure() != null) {
+                    if (gameBoard[x][y].getFigure().getColor() == "W") {
+                        printable += ANSI_WHITE;
+                    } else {
+                        printable += ANSI_BLACK;
+                    }
+                    printable += gameBoard[x][y].getFigure().getFigureSign();
+                } else {
+                    printable += " ";
+                }
+                printable += ANSI_RESET;
+                System.out.print(printable);
             }
+            System.out.println();
         }
     }
     
     private Pawn getPawn()
     {
         if (pawnPrototype == null) {
-            pawnPrototype = new Pawn(null);
+            pawnPrototype = new Pawn();
         }
         
         return pawnPrototype.clone();

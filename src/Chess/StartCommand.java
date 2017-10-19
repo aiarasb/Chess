@@ -6,10 +6,16 @@ package Chess;
 
 public class StartCommand extends Command
 {
+    private Game game;
+    
+    public StartCommand(Game game)
+    {
+        this.game = game;
+    }
 
     @Override
     public void execute() {
-        System.out.println("***START GAME!***");
+        game.startGame();
     }
     
 }

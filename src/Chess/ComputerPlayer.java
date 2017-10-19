@@ -12,15 +12,10 @@ public class ComputerPlayer extends Player
         artificialIntelligence = new AIAdapter();
     }
 
-    public ComputerPlayer()
-    {
-        this.artificialIntelligence = new AIAdapter();
-    }
-
     @Override
     public void getMove() {
-        System.out.println("---Kompiuteris padaro ejima---");
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        artificialIntelligence.getMove();
+        System.out.println("---Computer makes move---");
     }
 
     

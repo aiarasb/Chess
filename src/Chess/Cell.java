@@ -9,6 +9,8 @@ public abstract class Cell
     private Position position;
     
     private Figure figure;
+    
+    abstract public String getColor();
 
     public Position getPosition() {
         return position;

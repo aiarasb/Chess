@@ -6,6 +6,8 @@ package Chess;
 
 public class Knight extends Figure
 {
+    public Knight () {}
+    
     //konstruktorius. Iskvieciamas clone metode
     public Knight (Knight x)
     {
@@ -22,5 +24,11 @@ public class Knight extends Figure
     public void validMoves()
     {
         System.out.println("---SHOW ALL VALID MOVES FOR THE KNIGHT---");
+    }
+    
+    @Override
+    public String getFigureSign()
+    {
+        return "N";
     }
 }

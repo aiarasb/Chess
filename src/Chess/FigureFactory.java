@@ -13,22 +13,22 @@ public class FigureFactory extends AbstractFactory
             return null;
         }
         else if(type.equalsIgnoreCase("1")){
-            return new Queen(null);
+            return new Queen();
         }
         else if(type.equalsIgnoreCase("2")){
-            return new King(null);
+            return new King();
         }
         else if(type.equalsIgnoreCase("3")){
-            return new Knight(null);
+            return new Knight();
         }
         else if(type.equalsIgnoreCase("4")){
-            return new Rook(null);
+            return new Rook();
         }
         else if(type.equalsIgnoreCase("5")){
-            return new Bishop(null);
+            return new Bishop();
         }
         else if(type.equalsIgnoreCase("6")){
-            return new Pawn(null);
+            return new Pawn();
         }
     
         return null;

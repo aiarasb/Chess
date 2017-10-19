@@ -71,11 +71,15 @@ public class Client
     }
     
     public static void demonstrateStrategy() {
-        //TODO: demonstrate strategy
+        game.setBlackPlayer(new ComputerPlayer());
+        game.setWhitePlayer(new HumanPlayer());
+        
+        game.startGame();
     }
     
     public static void demonstrateAdapter() {
-        System.out.println("Please check the code");
+        ComputerPlayer player = new ComputerPlayer();
+        player.getMove();
     }
     
     public static void demonstratePrototype() {

@@ -6,6 +6,8 @@ package Chess;
 
 public class Queen extends Figure
 {
+    public Queen () {}
+    
     //konstruktorius. Iskvieciamas clone metode
     public Queen (Queen x)
     {
@@ -22,5 +24,11 @@ public class Queen extends Figure
     public void validMoves()
     {
         System.out.println("---SHOW ALL VALID MOVES FOR THE QUEEN---");
+    }
+    
+    @Override
+    public String getFigureSign()
+    {
+        return "Q";
     }
 }

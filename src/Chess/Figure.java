@@ -7,6 +7,8 @@ package Chess;
 public abstract class Figure
 {
     private String color;
+    
+    public Figure() {}
 
     //konstruktorius reikalingas prototipui
     public Figure(Figure f)
@@ -21,6 +23,8 @@ public abstract class Figure
 
     //abstraktus klonavimo metodas. Prototipo sablonui
     public abstract Figure clone();
+    
+    public abstract String getFigureSign();
 
     public String getColor() {
         return color;

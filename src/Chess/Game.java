@@ -12,7 +12,7 @@ public class Game
     
     private MoveHistory moveHistory;
 	
-	public Game(){
+    public Game(){
         moveHistory = new MoveHistory();
     }
     
@@ -20,17 +20,22 @@ public class Game
     {
         if(whitePlayer == null)
         {
-            this.whitePlayer = new HumanPlayer();
+            this.whitePlayer = new ComputerPlayer();
         }
         if(blackPlayer == null)
         {
-            this.blackPlayer = new HumanPlayer();
+            this.blackPlayer = new ComputerPlayer();
         }
-        StartCommand command = new StartCommand();
-        command.execute();
+        
+        boolean placeholder = false;
+        while(isGameOver() == placeholder) {
+            whitePlayer.getMove();
+            blackPlayer.getMove();
+            placeholder = !placeholder;
+        }
     }
     
-	public void undoMove(){
+    public void undoMove(){
         moveHistory.undoMove();
     }
 
@@ -42,5 +47,10 @@ public class Game
     public void setBlackPlayer(Player p)
     {
         this.blackPlayer = p;
+    }
+    
+    private boolean isGameOver() 
+    {
+        return false;
     }
 }

@@ -6,6 +6,8 @@ package Chess;
 
 public class Rook extends Figure
 {
+    public Rook () {}
+    
     //konstruktorius. Iskvieciamas clone metode
     public Rook (Rook x)
     {
@@ -22,5 +24,11 @@ public class Rook extends Figure
     public void validMoves()
     {
         System.out.println("---SHOW ALL VALID MOVES FOR THE ROOK---");
+    }
+    
+    @Override
+    public String getFigureSign()
+    {
+        return "R";
     }
 }

@@ -6,7 +6,7 @@ package Chess;
 
 public class Pawn extends Figure
 {
-    private boolean promoted;
+    private boolean promoted = false;
     
     private Figure promotedTo;
 
@@ -23,11 +23,7 @@ public class Pawn extends Figure
         }
     }
 
-    public Pawn()
-    {
-        this.promoted = false;
-        this.promoted = "";
-    }
+    public Pawn() {}
 
     @Override
     public void validMoves()
@@ -40,5 +36,11 @@ public class Pawn extends Figure
     public Pawn clone()
     {
         return new Pawn(this);
+    }
+    
+    @Override
+    public String getFigureSign()
+    {
+        return "P";
     }
 }

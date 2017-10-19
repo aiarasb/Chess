@@ -6,10 +6,16 @@ package Chess;
 
 public class UndoCommand extends Command
 {
+    private Game game;
+    
+    public UndoCommand(Game game)
+    {
+        this.game = game;
+    }
 
     @Override
     public void execute() {
-        System.out.println("***UNDO ONE MOVE!***");
+        game.undoMove();
     }
     
 }
