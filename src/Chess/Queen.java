@@ -21,6 +21,6 @@ public class Queen extends Figure
     @Override
     public void validMoves()
     {
-        
+        System.out.println("---SHOW ALL VALID MOVES FOR THE QUEEN---");
     }
 }
