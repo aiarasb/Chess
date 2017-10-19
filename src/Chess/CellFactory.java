@@ -24,7 +24,7 @@ public class CellFactory extends AbstractFactory
 
     @Override
     public Figure getFigure(String type) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return null;
     }
     
     

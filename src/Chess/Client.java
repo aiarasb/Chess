@@ -18,20 +18,74 @@ public class Client
         scanner.reset();
         
         while (true) {
-            System.out.println("What you want to demonstrate? (type 'quit' to end demonstration)");
-            System.out.println("factory, command");
+            System.out.println("What you want to demonstrate? (type 'q' to end demonstration)");
+            System.out.println("1 - singleton, 2 - abstract factory, 3 - factory, 4 - strategy");
+            System.out.println("5 - adapter, 6 - command, 7 - prototype, 8 - bridge");
             
             switch(scanner.nextLine()) {
-                case "quit":
+                case "q":
                     return;
-                case "factory":
+                case "1":
+                    demonstrateSingleton();
+                    break;
+                case "2":
+                    demonstrateAbstractFactory();
+                    break;
+                case "3":
                     demonstrateFactory();
                     break;
-                case "command":
+                case "4":
+                    demonstrateStrategy();
+                    break;
+                case "5":
+                    demonstrateAdapter();
+                    break;
+                case "6":
                     demonstrateCommand();
+                    break;
+                case "7":
+                    demonstratePrototype();
+                    break;
+                case "8":
+                    demonstrateBridge();
                     break;
             }
         }
+    }
+    
+    public static void demonstrateSingleton() {
+        Board board = Board.getInstance();
+        System.out.println(board.toString());
+    }
+    
+    public static void demonstrateAbstractFactory() {
+        FactoryProducer producer = new FactoryProducer();
+        
+        System.out.println("What factory do you want to create?");
+        System.out.println("figure, cell");
+        AbstractFactory factory = producer.getFactory(scanner.nextLine());
+        
+        System.out.println(factory.toString());
+        System.out.println("Created cell: "+factory.getCell("W"));
+        System.out.println("Created figure: "+factory.getFigure("1"));
+    }
+    
+    public static void demonstrateStrategy() {
+        //TODO: demonstrate strategy
+    }
+    
+    public static void demonstrateAdapter() {
+        System.out.println("Please check the code");
+    }
+    
+    public static void demonstratePrototype() {
+        Board board = Board.getInstance();
+        board.setup();
+        board.draw();
+    }
+    
+    public static void demonstrateBridge() {
+        System.out.println("Please check the code");
     }
     
 	/** To demonstrate Factory design pattern*/

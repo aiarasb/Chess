@@ -13,7 +13,7 @@ public class Knight extends Figure
     }
 
     @Override
-    public Figure clone()
+    public Knight clone()
     {
         return new Knight(this);
     }

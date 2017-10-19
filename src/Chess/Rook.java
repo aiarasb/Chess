@@ -13,7 +13,7 @@ public class Rook extends Figure
     }
 
     @Override
-    public Figure clone()
+    public Rook clone()
     {
         return new Rook(this);
     }

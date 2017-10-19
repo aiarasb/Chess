@@ -21,4 +21,12 @@ public abstract class Figure
 
     //abstraktus klonavimo metodas. Prototipo sablonui
     public abstract Figure clone();
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
 }

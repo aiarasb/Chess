@@ -31,7 +31,7 @@ public class Pawn extends Figure
 
     //clone metodo realizacija. Prototipo sablonui
     @Override
-    public Figure clone()
+    public Pawn clone()
     {
         return new Pawn(this);
     }

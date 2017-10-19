@@ -13,7 +13,7 @@ public class Bishop extends Figure
     }
 
     @Override
-    public Figure clone()
+    public Bishop clone()
     {
         return new Bishop(this);
     }
