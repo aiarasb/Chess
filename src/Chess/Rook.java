@@ -21,6 +21,6 @@ public class Rook extends Figure
     @Override
     public void validMoves()
     {
-        
+        System.out.println("---SHOW ALL VALID MOVES FOR THE ROOK---");
     }
 }

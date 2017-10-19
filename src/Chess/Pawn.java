@@ -23,10 +23,16 @@ public class Pawn extends Figure
         }
     }
 
+    public Pawn()
+    {
+        this.promoted = false;
+        this.promoted = "";
+    }
+
     @Override
     public void validMoves()
     {
-        
+        System.out.println("---SHOW ALL VALID MOVES FOR THE PAWN---");
     }
 
     //clone metodo realizacija. Prototipo sablonui
