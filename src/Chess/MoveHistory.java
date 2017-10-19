@@ -10,7 +10,9 @@ public class MoveHistory
     
     public void undoMove( )
     {
-        
+		UndoCommand undo = new UndoCommand();
+        undo.execute();
+
     }
     
     
