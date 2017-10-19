@@ -8,17 +8,34 @@ import java.util.Scanner;
 
 public class Client
 {
-    private Game game = new Game();
+    private static Game game = new Game();
+    
+    private static Scanner scanner;
     
     public static void main( String[] args )
     {
+        scanner = new Scanner(System.in);
+        scanner.reset();
         
+        while (true) {
+            System.out.println("What you want to demonstrate? (type 'quit' to end demonstration)");
+            System.out.println("factory, command");
+            
+            switch(scanner.nextLine()) {
+                case "quit":
+                    return;
+                case "factory":
+                    demonstrateFactory();
+                    break;
+                case "command":
+                    demonstrateCommand();
+                    break;
+            }
+        }
     }
     
 	/** To demonstrate Factory design pattern*/
     public static void demonstrateFactory(){
-        Scanner scanner = new Scanner(System.in);
-        scanner.reset();
         System.out.println("Select Cell color: B - black; W - white;");
         String cellColor = scanner.nextLine();
         CellFactory cellFac = new CellFactory();
@@ -33,9 +50,7 @@ public class Client
     }
     
     /** To demonstrate Command design pattern*/
-    public void demonstrateCommand(){
-        Scanner scanner = new Scanner(System.in);
-        scanner.reset();
+    public static void demonstrateCommand(){
         System.out.println("Which command do you want to execute? (S)TART GAME or (U)NDO MOVE");
         String com = scanner.nextLine();
         if(com.equalsIgnoreCase("S")){
