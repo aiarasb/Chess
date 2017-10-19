@@ -7,7 +7,7 @@ package Chess;
 public class Queen extends Figure
 {
     //konstruktorius. Iskvieciamas clone metode
-    private Queen (Queen x)
+    public Queen (Queen x)
     {
         super(x);
     }

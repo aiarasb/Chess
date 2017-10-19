@@ -7,7 +7,7 @@ package Chess;
 public class Bishop extends Figure
 {
     //konstruktorius. Iskvieciamas clone metode
-    private Bishop (Bishop x)
+    public Bishop (Bishop x)
     {
         super(x);
     }

@@ -7,7 +7,7 @@ package Chess;
 public class Rook extends Figure
 {
     //konstruktorius. Iskvieciamas clone metode
-    private Rook (Rook x)
+    public Rook (Rook x)
     {
         super(x);
     }

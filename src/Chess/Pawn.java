@@ -10,7 +10,7 @@ public class Pawn extends Figure
     
     private Figure promotedTo;
 
-    private Pawn(Pawn p)
+    public Pawn(Pawn p)
     {
         // Parent constructor call is mandatory in order to copy private fields
         // defined in parent class.
