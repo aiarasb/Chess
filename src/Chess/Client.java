@@ -110,13 +110,17 @@ public class Client
     /** To demonstrate Command design pattern*/
     public static void demonstrateCommand(){
         System.out.println("Which command do you want to execute? (S)TART GAME or (U)NDO MOVE");
+        Command c;
         String com = scanner.nextLine();
         if(com.equalsIgnoreCase("S")){
-            game.startGame();
+            c = new StartCommand(game);
+        }else if(com.equalsIgnoreCase("U")){
+            c = new UndoCommand(game);
+        }else {
+            return;
         }
-        else if(com.equalsIgnoreCase("U")){
-            game.undoMove();
-        }
+        
+        c.execute();
     }
     
 }
