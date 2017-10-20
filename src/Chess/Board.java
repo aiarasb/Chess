@@ -6,11 +6,9 @@ package Chess;
 
 public class Board
 {
-    public static final String ANSI_GREEN_BACKGROUND = "\u001B[42m";
-    public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
+    public static final String ANSI_GREEN_BACKGROUND = "42m";
+    public static final String ANSI_WHITE_BACKGROUND = "47m";
     public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_BLACK = "\u001B[30m";
-    public static final String ANSI_WHITE = "\u001B[37m";
 
     private static Board instance = new Board();
     
@@ -27,7 +25,7 @@ public class Board
                 Position pos = new Position(x, y);
                 Cell cell;
                 
-                if ((x+y)%2==0) {
+                if ((x+y)%2==1) {
                     cell = new BlackCell();
                 } else {
                     cell = new WhiteCell();
@@ -89,21 +87,16 @@ public class Board
     {
         for(int x=0;x<8;x++){
             for(int y=0;y<8;y++) {
-                String printable = "";
+                String printable = "\u001B[";
                 if (gameBoard[x][y].getColor() == "white") {
-                    printable += ANSI_WHITE_BACKGROUND+ANSI_BLACK;
+                    printable += ANSI_WHITE_BACKGROUND;
                 } else {
                     printable += ANSI_GREEN_BACKGROUND;
                 }
                 if (gameBoard[x][y].getFigure() != null) {
-                    if (gameBoard[x][y].getFigure().getColor() == "W") {
-                        printable += ANSI_WHITE;
-                    } else {
-                        printable += ANSI_BLACK;
-                    }
-                    printable += gameBoard[x][y].getFigure().getFigureSign();
+                    printable += gameBoard[x][y].getFigure().getColor().toLowerCase() + gameBoard[x][y].getFigure().getFigureSign();
                 } else {
-                    printable += " ";
+                    printable += "  ";
                 }
                 printable += ANSI_RESET;
                 System.out.print(printable);
