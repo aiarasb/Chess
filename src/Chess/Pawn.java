@@ -10,7 +10,7 @@ public class Pawn extends Figure
     
     private Figure promotedTo;
 
-    public Pawn(Pawn p)
+    public Pawn( Pawn p )
     {
         // Parent constructor call is mandatory in order to copy private fields
         // defined in parent class.
@@ -23,23 +23,23 @@ public class Pawn extends Figure
         }
     }
 
-    public Pawn() {}
+    public Pawn( ) {}
 
     @Override
-    public void validMoves()
+    public void validMoves( )
     {
         System.out.println("---SHOW ALL VALID MOVES FOR THE PAWN---");
     }
 
     //clone metodo realizacija. Prototipo sablonui
     @Override
-    public Pawn clone()
+    public Pawn clone( )
     {
         return new Pawn(this);
     }
     
     @Override
-    public String getFigureSign()
+    public String getFigureSign( )
     {
         return "P";
     }

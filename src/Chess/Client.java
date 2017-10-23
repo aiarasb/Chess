@@ -53,12 +53,12 @@ public class Client
         }
     }
     
-    public static void demonstrateSingleton() {
+    public static void demonstrateSingleton( ) {
         Board board = Board.getInstance();
         System.out.println(board.toString());
     }
     
-    public static void demonstrateAbstractFactory() {
+    public static void demonstrateAbstractFactory( ) {
         FactoryProducer producer = new FactoryProducer();
         
         System.out.println("What factory do you want to create?");
@@ -70,30 +70,32 @@ public class Client
         System.out.println("Created figure: "+factory.getFigure("1"));
     }
     
-    public static void demonstrateStrategy() {
+    public static void demonstrateStrategy( ) {
         game.setBlackPlayer(new ComputerPlayer());
         game.setWhitePlayer(new HumanPlayer());
         
         game.startGame();
     }
     
-    public static void demonstrateAdapter() {
+    public static void demonstrateAdapter( ) {
         ComputerPlayer player = new ComputerPlayer();
         player.getMove();
     }
     
-    public static void demonstratePrototype() {
+    public static void demonstratePrototype( ) {
         Board board = Board.getInstance();
         board.setup();
         board.draw();
     }
     
-    public static void demonstrateBridge() {
+    public static void demonstrateBridge( ) {
         System.out.println("Please check the code");
     }
     
-	/** To demonstrate Factory design pattern*/
-    public static void demonstrateFactory(){
+	/**
+     * To demonstrate Factory design pattern
+     */
+    public static void demonstrateFactory( ){
         System.out.println("Select Cell color: B - black; W - white;");
         String cellColor = scanner.nextLine();
         CellFactory cellFac = new CellFactory();
@@ -107,20 +109,14 @@ public class Client
         System.out.println(figure.toString());
     }
     
-    /** To demonstrate Command design pattern*/
-    public static void demonstrateCommand(){
-        System.out.println("Which command do you want to execute? (S)TART GAME or (U)NDO MOVE");
-        Command c;
-        String com = scanner.nextLine();
-        if(com.equalsIgnoreCase("S")){
-            c = new StartCommand(game);
-        }else if(com.equalsIgnoreCase("U")){
-            c = new UndoCommand(game);
-        }else {
-            return;
-        }
+    /**
+     * To demonstrate Command design pattern
+     */
+    public static void demonstrateCommand( ){
+        ComputerPlayer player = new ComputerPlayer();
+        MoveInterface move = player.getMove();
         
-        c.execute();
+        move.execute();
     }
     
 }

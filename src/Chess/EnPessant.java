@@ -1,26 +1,27 @@
 /**
- * @(#) Move.java
+ * @(#) EnPessant.java
  */
 
 package Chess;
 
-public class Move implements MoveInterface
+public class EnPessant implements MoveInterface
 {
     private Cell from;
     
     private Cell to;
     
-    private Figure figure;
-
-    public Move(Cell from, Cell to, Figure figure) {
+    private Pawn figure;
+    
+    public EnPessant(Cell from, Cell to, Pawn pawn)
+    {
         this.from = from;
         this.to = to;
-        this.figure = figure;
+        this.figure = pawn;
     }
     
     public void execute( )
     {
-        System.out.println("Executed simple move");
+        
     }
     
     public void undo( )

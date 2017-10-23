@@ -10,10 +10,9 @@ public class Game
     
     private Player blackPlayer;
     
-    private MoveHistory moveHistory;
+    private MoveInterface lastMove;
 	
-    public Game(){
-        moveHistory = new MoveHistory();
+    public Game( ){
     }
     
     public void startGame( )
@@ -35,21 +34,21 @@ public class Game
         }
     }
     
-    public void undoMove(){
-        moveHistory.undoMove();
+    public void undoMove( ){
+        lastMove.undo();
     }
 
-    public void setWhitePlayer(Player p)
+    public void setWhitePlayer( Player p )
     {
         this.whitePlayer = p;
     }
 
-    public void setBlackPlayer(Player p)
+    public void setBlackPlayer( Player p )
     {
         this.blackPlayer = p;
     }
     
-    private boolean isGameOver() 
+    private boolean isGameOver( ) 
     {
         return false;
     }

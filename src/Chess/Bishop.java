@@ -6,28 +6,28 @@ package Chess;
 
 public class Bishop extends Figure
 {
-    public Bishop () {}
+    public Bishop( ) {}
     
     //konstruktorius. Iskvieciamas clone metode
-    public Bishop (Bishop x)
+    public Bishop( Bishop x )
     {
         super(x);
     }
 
     @Override
-    public Bishop clone()
+    public Bishop clone( )
     {
         return new Bishop(this);
     }
 
     @Override
-    public void validMoves()
+    public void validMoves( )
     {
         System.out.println("---SHOW ALL VALID MOVES FOR THE BISHOP---");
     }
     
     @Override
-    public String getFigureSign()
+    public String getFigureSign( )
     {
         return "B";
     }

@@ -35,7 +35,7 @@ public class FigureFactory extends AbstractFactory
     }
 
     @Override
-    public Cell getCell(String color) {
+    public Cell getCell( String color ) {
         return null;
     }
     

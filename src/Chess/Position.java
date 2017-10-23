@@ -10,16 +10,16 @@ public class Position
     
     private int y;
     
-    public Position(int x, int y) {
+    public Position( int x, int y ) {
         this.x = x;
         this.y = y;
     }
 
-    public int getX() {
+    public int getX( ) {
         return x;
     }
 
-    public int getY() {
+    public int getY( ) {
         return y;
     }
     

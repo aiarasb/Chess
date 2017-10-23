@@ -8,14 +8,16 @@ public class ComputerPlayer extends Player
 {
     private AIAdapter artificialIntelligence;
     
-    public ComputerPlayer() {
+    public ComputerPlayer( ) {
         artificialIntelligence = new AIAdapter();
     }
 
     @Override
-    public void getMove() {
-        artificialIntelligence.getMove();
+    public MoveInterface getMove( ) {
+        MoveInterface move = artificialIntelligence.getMove();
         System.out.println("---Computer makes move---");
+        
+        return move;
     }
 
     

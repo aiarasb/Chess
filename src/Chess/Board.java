@@ -6,8 +6,8 @@ package Chess;
 
 public class Board
 {
-    public static final String ANSI_GREEN_BACKGROUND = "42m";
-    public static final String ANSI_WHITE_BACKGROUND = "47m";
+    public static final String ANSI_GREEN_BACKGROUND = "\u001B[42m";
+    public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
     public static final String ANSI_RESET = "\u001B[0m";
 
     private static Board instance = new Board();
@@ -17,6 +17,12 @@ public class Board
     private FactoryProducer factoryProducer;
     
     private Cell[][] gameBoard = new Cell[8][8];
+    
+    
+    public static final String ANSI_BLACK = "\u001B[30m";
+    
+    
+    public static final String ANSI_WHITE = "\u001B[37m";
     
     private Board( )
     {
@@ -42,11 +48,11 @@ public class Board
         return instance;
     }
 
-    public FactoryProducer getFactoryProducer() {
+    public FactoryProducer getFactoryProducer( ) {
         return factoryProducer;
     }
 
-    public void setFactoryProducer(FactoryProducer factoryProducer) {
+    public void setFactoryProducer( FactoryProducer factoryProducer ) {
         this.factoryProducer = factoryProducer;
     }
     
@@ -83,7 +89,7 @@ public class Board
         }
     }
     
-    public void draw()
+    public void draw( )
     {
         for(int x=0;x<8;x++){
             for(int y=0;y<8;y++) {
@@ -105,7 +111,7 @@ public class Board
         }
     }
     
-    private Pawn getPawn()
+    private Pawn getPawn( )
     {
         if (pawnPrototype == null) {
             pawnPrototype = new Pawn();

@@ -10,21 +10,21 @@ public abstract class Cell
     
     private Figure figure;
     
-    abstract public String getColor();
+    public abstract String getColor( );
 
-    public Position getPosition() {
+    public Position getPosition( ) {
         return position;
     }
 
-    public void setPosition(Position position) {
+    public void setPosition( Position position ) {
         this.position = position;
     }
 
-    public Figure getFigure() {
+    public Figure getFigure( ) {
         return figure;
     }
 
-    public void setFigure(Figure figure) {
+    public void setFigure( Figure figure ) {
         this.figure = figure;
     }
     

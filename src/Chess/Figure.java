@@ -8,10 +8,10 @@ public abstract class Figure
 {
     private String color;
     
-    public Figure() {}
+    public Figure( ) {}
 
     //konstruktorius reikalingas prototipui
-    public Figure(Figure f)
+    public Figure( Figure f )
     {
         if (f != null)
         {
@@ -22,15 +22,15 @@ public abstract class Figure
     public abstract void validMoves( );
 
     //abstraktus klonavimo metodas. Prototipo sablonui
-    public abstract Figure clone();
+    public abstract Figure clone( );
     
-    public abstract String getFigureSign();
+    public abstract String getFigureSign( );
 
-    public String getColor() {
+    public String getColor( ) {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor( String color ) {
         this.color = color;
     }
 }

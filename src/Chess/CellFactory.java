@@ -23,7 +23,7 @@ public class CellFactory extends AbstractFactory
     }
 
     @Override
-    public Figure getFigure(String type) {
+    public Figure getFigure( String type ) {
         return null;
     }
     
