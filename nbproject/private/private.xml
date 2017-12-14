@@ -3,11 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Studijos/7%20semestras/Objektinis%20programu%20projektavimas%20(design%20pattern)/Chess/src/Chess/Cell.java</file>
-            <file>file:/D:/Studijos/7%20semestras/Objektinis%20programu%20projektavimas%20(design%20pattern)/Chess/src/Chess/Pawn.java</file>
-            <file>file:/D:/Studijos/7%20semestras/Objektinis%20programu%20projektavimas%20(design%20pattern)/Chess/src/Chess/Board.java</file>
-            <file>file:/D:/Studijos/7%20semestras/Objektinis%20programu%20projektavimas%20(design%20pattern)/Chess/src/Chess/Client.java</file>
-            <file>file:/D:/Studijos/7%20semestras/Objektinis%20programu%20projektavimas%20(design%20pattern)/Chess/src/Chess/Rook.java</file>
+            <file>file:/C:/Users/Dovile/projects/Chess/src/Chess/ImageFactory.java</file>
+            <file>file:/C:/Users/Dovile/projects/Chess/src/Chess/Board.java</file>
+            <file>file:/C:/Users/Dovile/projects/Chess/src/Chess/Client.java</file>
+            <file>file:/C:/Users/Dovile/projects/Chess/src/Chess/FigureFactory.java</file>
         </group>
     </open-files>
 </project-private>

@@ -4,7 +4,7 @@
 
 package Chess;
 
-public class EnPessant implements MoveInterface
+public class EnPessant extends AbsMove
 {
     private Cell from;
     
@@ -19,14 +19,25 @@ public class EnPessant implements MoveInterface
         this.figure = pawn;
     }
     
-    public void execute( )
-    {
-        
-    }
-    
+    @Override
     public void undo( )
     {
         
+    }
+
+    @Override
+    protected void removeFigure() {
+        System.out.println("EnPessant - remove figure");
+    }
+
+    @Override
+    protected void moveFigure() {
+        System.out.println("EnPessant - remove figure");
+    }
+
+    @Override
+    protected void promoteFigure() {
+        System.out.println("EnPessant - remove figure");
     }
     
     

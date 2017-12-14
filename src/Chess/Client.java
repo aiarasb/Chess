@@ -114,7 +114,7 @@ public class Client
      */
     public static void demonstrateCommand( ){
         ComputerPlayer player = new ComputerPlayer();
-        MoveInterface move = player.getMove();
+        AbsMove move = player.getMove();
         
         move.execute();
     }

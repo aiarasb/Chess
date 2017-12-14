@@ -4,10 +4,12 @@
 
 package Chess;
 
+import javax.swing.ImageIcon;
+
 public abstract class Figure
 {
     private String color;
-    
+    private ImageIcon image;
     public Figure( ) {}
 
     //konstruktorius reikalingas prototipui
@@ -32,5 +34,13 @@ public abstract class Figure
 
     public void setColor( String color ) {
         this.color = color;
+    }
+    
+    public void setImage(ImageIcon image){
+        this.image = image;
+    }
+    
+    public ImageIcon getImage(){
+        return this.image;
     }
 }

@@ -4,7 +4,7 @@
 
 package Chess;
 
-public class Castling implements MoveInterface
+public class Castling extends AbsMove
 {
     private Cell from;
     
@@ -27,15 +27,25 @@ public class Castling implements MoveInterface
         this.rookTo = rookTo;
     }
     
-    public void execute( )
-    {
-        
-    }
-    
+    @Override
     public void undo( )
     {
         
     }
-    
-    
+
+    @Override
+    protected void removeFigure() {
+       System.out.println("Casting - remove figure");
+    }
+
+    @Override
+    protected void moveFigure() {
+        System.out.println("Casting - move figure");
+    }
+
+    @Override
+    protected void promoteFigure() {
+        System.out.println("Casting - promote figure");
+    }
+  
 }

@@ -13,8 +13,8 @@ public class ComputerPlayer extends Player
     }
 
     @Override
-    public MoveInterface getMove( ) {
-        MoveInterface move = artificialIntelligence.getMove();
+    public AbsMove getMove( ) {
+        AbsMove move = artificialIntelligence.getMove();
         System.out.println("---Computer makes move---");
         
         return move;

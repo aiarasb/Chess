@@ -4,7 +4,7 @@
 
 package Chess;
 
-public class Promotion implements MoveInterface
+public class Promotion extends AbsMove
 {
     private Cell from;
     
@@ -22,15 +22,24 @@ public class Promotion implements MoveInterface
         this.promotedTo = promotedTo;
     }
     
-    public void execute( )
-    {
-        
-    }
-    
     public void undo( )
     {
         
     }
     
+    @Override
+    protected void removeFigure() {
+        System.out.println("Promotion - remove figure");
+    }
+
+    @Override
+    protected void moveFigure() {
+        System.out.println("Promotion - remove figure");
+    }
+
+    @Override
+    protected void promoteFigure() {
+        System.out.println("Promotion - remove figure");
+    }
     
 }

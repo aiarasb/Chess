@@ -4,6 +4,8 @@
 
 package Chess;
 
+import javax.swing.ImageIcon;
+
 public class Board
 {
     public static final String ANSI_GREEN_BACKGROUND = "\u001B[42m";
@@ -69,6 +71,7 @@ public class Board
             {"W4","W3","W5","W2","W1","W5","W3","W4"},
         };
         FigureFactory factory = new FigureFactory();
+        ImageFactory imgFactory = new ImageFactory();
         
         for(int x=0;x<8;x++){
             for(int y=0;y<8;y++) {
@@ -81,8 +84,10 @@ public class Board
                     } else {
                         fig = factory.getFigure(figType);
                     }
-
+                    
+                    ImageIcon image = imgFactory.getImage(figType);
                     fig.setColor(""+boardConfig[x][y].charAt(0));
+                    fig.setImage(image);
                     gameBoard[x][y].setFigure(fig);
                 }
             }

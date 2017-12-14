@@ -12,7 +12,7 @@ public class AIAdapter
         artificialIntelligence = new AI();
     }
     
-    public MoveInterface getMove( ) {
+    public AbsMove getMove( ) {
         System.out.println("AI Adapter calls AI for move");
         //transform board
         String aiMove = artificialIntelligence.makeMove();
