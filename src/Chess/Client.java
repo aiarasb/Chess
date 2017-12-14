@@ -4,6 +4,7 @@
 
 package Chess;
 
+import MoveResolving.MoveResolver;
 import java.util.Scanner;
 
 public class Client
@@ -21,6 +22,7 @@ public class Client
             System.out.println("What you want to demonstrate? (type 'q' to end demonstration)");
             System.out.println("1 - singleton, 2 - abstract factory, 3 - factory, 4 - strategy");
             System.out.println("5 - adapter, 6 - command, 7 - prototype, 8 - bridge");
+            System.out.println("9 - interpreter");
             
             switch(scanner.nextLine()) {
                 case "q":
@@ -49,7 +51,24 @@ public class Client
                 case "8":
                     demonstrateBridge();
                     break;
+                case "9":
+                    demonstrateInterpreter();
+                    break;
             }
+        }
+    }
+    
+    public static void demonstrateInterpreter()
+    {
+        MoveResolver resolver = new MoveResolver();
+        System.out.print("Give me move:");
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        try {
+            AbsMove move = resolver.resolve(input);
+            System.out.println(move);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
     }
     

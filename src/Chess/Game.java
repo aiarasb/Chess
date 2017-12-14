@@ -9,8 +9,8 @@ public class Game
     private Player whitePlayer;
     
     private Player blackPlayer;
-    
-    private MoveInterface lastMove;
+        
+    private HistoryStackIterator history;
 	
     public Game( ){
     }
@@ -26,15 +26,25 @@ public class Game
             this.blackPlayer = new ComputerPlayer();
         }
         
+        history = new HistoryStackIterator(new GameHistory());
+        
         boolean placeholder = false;
+        AbsMove move;
+        MoveMemento moveMemento;
         while(isGameOver() == placeholder) {
-            whitePlayer.getMove();
-            blackPlayer.getMove();
+            move = whitePlayer.getMove();
+            moveMemento = new MoveMemento(move);
+            history.push(moveMemento);
+            move = blackPlayer.getMove();
+            moveMemento = new MoveMemento(move);
+            history.push(moveMemento);
             placeholder = !placeholder;
         }
     }
     
     public void undoMove( ){
+        MoveMemento lastMoveMemento = history.pop();
+        AbsMove lastMove = lastMoveMemento.getMove();
         lastMove.undo();
     }
 
