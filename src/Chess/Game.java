@@ -11,8 +11,16 @@ public class Game
     private Player blackPlayer;
         
     private HistoryStackIterator history;
+    
+    //Chain of Responsibility
+    private Logger debugger = new DebuggerLogger();
+    private Logger warning = new WarningLogger();
+    private Logger error = new ErrorLogger();
 	
     public Game( ){
+        //surisama Chain of Responsibility eiga, eiliskumas
+        debugger.setNextLogger(warning);
+        warning.setNextLogger(error);
     }
     
     public void startGame( )
@@ -40,6 +48,14 @@ public class Game
             history.push(moveMemento);
             placeholder = !placeholder;
         }
+    }
+    
+    public void testChainOfResponsibility()
+    {
+        debugger.log("123", "warning");
+        debugger.log("abc", "error");
+        debugger.log("asd", "debug");
+        debugger.log("ktu", "ktu");
     }
     
     public void undoMove( ){

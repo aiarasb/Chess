@@ -22,7 +22,7 @@ public class Client
             System.out.println("What you want to demonstrate? (type 'q' to end demonstration)");
             System.out.println("1 - singleton, 2 - abstract factory, 3 - factory, 4 - strategy");
             System.out.println("5 - adapter, 6 - command, 7 - prototype, 8 - bridge");
-            System.out.println("9 - interpreter");
+            System.out.println("9 - interpreter, 10 - chain of responsibility");
             
             switch(scanner.nextLine()) {
                 case "q":
@@ -53,6 +53,9 @@ public class Client
                     break;
                 case "9":
                     demonstrateInterpreter();
+                    break;
+                case "10":
+                    game.testChainOfResponsibility();
                     break;
             }
         }
