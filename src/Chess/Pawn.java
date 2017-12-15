@@ -46,6 +46,6 @@ public class Pawn extends Figure
 
     @Override
     public void Accept(Visitor v) {
-        //tikrinam tik karaliu (?), tad cia nieko nedarom
+        v.visit(this);
     }
 }

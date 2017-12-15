@@ -19,7 +19,7 @@ public class ErrorLogger extends Logger{
         }
         else
         {
-            System.out.println("Yra tik trys loginimo tupai: debug, warning ir error.");
+            System.out.println("Yra tik trys loginimo tipai: debug, warning ir error.");
         }
             
     }
