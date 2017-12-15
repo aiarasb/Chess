@@ -4,13 +4,13 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/KTU/7%20semestras/Objektinis%20programų%20projektavimas/Chess/src/Chess/Pawn.java</file>
+            <file>file:/D:/KTU/7%20semestras/Objektinis%20programų%20projektavimas/Chess/src/Chess/MateVisitor.java</file>
+            <file>file:/D:/KTU/7%20semestras/Objektinis%20programų%20projektavimas/Chess/src/Chess/CheckVisitor.java</file>
+            <file>file:/D:/KTU/7%20semestras/Objektinis%20programų%20projektavimas/Chess/src/Chess/Board.java</file>
             <file>file:/D:/KTU/7%20semestras/Objektinis%20programų%20projektavimas/Chess/src/Chess/Game.java</file>
-            <file>file:/D:/KTU/7%20semestras/Objektinis%20programų%20projektavimas/Chess/src/Chess/Logger.java</file>
+            <file>file:/D:/KTU/7%20semestras/Objektinis%20programų%20projektavimas/Chess/src/Chess/Visitor.java</file>
             <file>file:/D:/KTU/7%20semestras/Objektinis%20programų%20projektavimas/Chess/src/Chess/Figure.java</file>
-            <file>file:/D:/KTU/7%20semestras/Objektinis%20programų%20projektavimas/Chess/src/Chess/DebuggerLogger.java</file>
-            <file>file:/D:/KTU/7%20semestras/Objektinis%20programų%20projektavimas/Chess/src/Chess/ErrorLogger.java</file>
             <file>file:/D:/KTU/7%20semestras/Objektinis%20programų%20projektavimas/Chess/src/Chess/Client.java</file>
-            <file>file:/D:/KTU/7%20semestras/Objektinis%20programų%20projektavimas/Chess/src/Chess/WarningLogger.java</file>
         </group>
     </open-files>
 </project-private>

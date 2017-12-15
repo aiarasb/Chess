@@ -31,4 +31,8 @@ public class Queen extends Figure
     {
         return "Q";
     }
+    @Override
+    public void Accept(Visitor v) {
+        //tikrinam tik karaliu (?), tad cia nieko nedarom
+    }
 }

@@ -31,4 +31,8 @@ public class King extends Figure
     {
         return "K";
     }
+    @Override
+    public void Accept(Visitor v) {
+        v.visit(this);
+    }
 }

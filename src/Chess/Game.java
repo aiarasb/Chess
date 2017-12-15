@@ -16,6 +16,9 @@ public class Game
     private Logger debugger = new DebuggerLogger();
     private Logger warning = new WarningLogger();
     private Logger error = new ErrorLogger();
+    
+    //fikcines figuros
+    private Figure figureKing = new King();
 	
     public Game( ){
         //surisama Chain of Responsibility eiga, eiliskumas
@@ -48,6 +51,16 @@ public class Game
             history.push(moveMemento);
             placeholder = !placeholder;
         }
+    }
+    
+    public void testVisitor()
+    {
+        Visitor v1 = new CheckVisitor();
+        System.out.println("tikrinamas CheckVisitor");
+        figureKing.Accept(v1);
+        Visitor v2 = new MateVisitor();
+        System.out.println("tikrinamas MateVisitor");
+        figureKing.Accept(v2);
     }
     
     public void testChainOfResponsibility()

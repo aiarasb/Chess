@@ -31,4 +31,9 @@ public class Bishop extends Figure
     {
         return "B";
     }
+    
+    @Override
+    public void Accept(Visitor v) {
+        //tikrinam tik karaliu (?), tad cia nieko nedarom
+    }
 }

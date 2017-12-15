@@ -31,4 +31,8 @@ public class Rook extends Figure
     {
         return "R";
     }
+    @Override
+    public void Accept(Visitor v) {
+        //tikrinam tik karaliu (?), tad cia nieko nedarom
+    }
 }

@@ -43,4 +43,6 @@ public abstract class Figure
     public ImageIcon getImage(){
         return this.image;
     }
+    
+    public abstract void Accept(Visitor v);
 }
